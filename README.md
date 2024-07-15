@@ -6,13 +6,11 @@
 
 # Topic: Computer Graphics \[2014\]
 
-By Heider Jeffer
+### Speakers: Heider Jeffer and Prof. Kai Hormann 
 
-Instructor: Mehdi Jazayeri
+### Instructor: Mehdi Jazayeri
 
-Assistant: Sasa Nesic
-
-Speaker: Prof. Kai Hormann
+### Assistant: Sasa Nesic
 
 # Summary
 
@@ -105,3 +103,112 @@ and faster real-time rendering needs. Sometimes the target of the
 animation is the computer itself, but sometimes the target is another
 medium, such as film. It is also referred to as CGI (Computer-generated
 imagery or computer-generated imaging), especially when used in films.
+
+# Examples using Python:
+
+These examples provide a basic understanding and implementation of each aspect mentioned in the research paper on Computer Graphics. Depending on specific requirements or applications, these examples can be expanded and customized further.
+
+To provide a comprehensive code implementation for each section mentioned in the research paper on Computer Graphics, I'll break down the implementation into several key components: 2D graphics, pixel art, vector graphics, 3D graphics, and computer animation. Each section will include a basic example in Python to illustrate the concepts.
+
+### 1. 2D Computer Graphics
+
+```python
+import matplotlib.pyplot as plt
+
+# Example of plotting a simple 2D graph using matplotlib
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+plt.plot(x, y)
+plt.title('Simple 2D Graph')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.show()
+```
+
+### 2. Pixel Art
+
+```python
+from PIL import Image, ImageDraw
+
+# Creating a simple pixel art image using PIL (Python Imaging Library)
+image = Image.new('RGB', (100, 100), color='white')
+draw = ImageDraw.Draw(image)
+
+# Drawing a smiley face
+draw.rectangle([(30, 30), (70, 70)], fill='yellow')  # face
+draw.rectangle([(40, 40), (50, 50)], fill='black')   # left eye
+draw.rectangle([(60, 40), (70, 50)], fill='black')   # right eye
+draw.line([(40, 60), (60, 60)], fill='black', width=3)  # mouth
+
+image.show()
+```
+
+### 3. Vector Graphics
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Example of drawing vector graphics using matplotlib
+fig, ax = plt.subplots()
+
+# Drawing a vector arrow
+ax.arrow(0, 0, 3, 4, head_width=0.5, head_length=0.5, fc='blue', ec='black')
+ax.set_xlim(-1, 5)
+ax.set_ylim(-1, 5)
+ax.grid(True)
+plt.title('Vector Arrow Example')
+plt.show()
+```
+
+### 4. 3D Computer Graphics
+
+```python
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Example of plotting 3D graphics using matplotlib
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Creating data
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+z = [1, 4, 9, 16, 25]
+
+# Plotting a 3D scatter plot
+ax.scatter(x, y, z, c='r', marker='o')
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_zlabel('Z axis')
+plt.title('3D Scatter Plot Example')
+plt.show()
+```
+
+### 5. Computer Animation
+
+For computer animation, a basic example using libraries like Pygame or Matplotlib's animation module would be suitable. Here’s an example using Matplotlib:
+
+```python
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import numpy as np
+
+# Example of creating a simple animation using matplotlib
+fig, ax = plt.subplots()
+
+x = np.linspace(0, 2*np.pi, 100)
+y = np.sin(x)
+
+line, = ax.plot(x, y)
+
+def animate(frame):
+    line.set_ydata(np.sin(x + frame / 10.0))
+    return line,
+
+ani = FuncAnimation(fig, animate, frames=100, interval=50)
+plt.title('Simple Sine Wave Animation')
+plt.show()
+```
+
