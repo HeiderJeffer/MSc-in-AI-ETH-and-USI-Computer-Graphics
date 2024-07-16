@@ -1,16 +1,13 @@
-# <span class="smallcaps">ETH and UNIVERSITÀ DELLA SVIZZERA ITALIANA</span>
+<body>
+<img src = "https://github-vistors-counter.onrender.com/github?username=https://github.com/HeiderJeffer/MSc-in-AI-ETH-and-USI-Computer-Graphics" alt = "Visitors-Counter"/>
+</body>
 
-# FACULTY OF COMPUTER SCIENCE
-
-# Master in Artificial Intelligence
-
-# Topic: Computer Graphics \[2014\]
-
-### Speakers: Heider Jeffer and Prof. Kai Hormann 
-
-### Instructor: Mehdi Jazayeri
-
-### Assistant: Sasa Nesic
+#### <span class="smallcaps">ETH Zurich and UNIVERSITÀ DELLA SVIZZERA ITALIANA</span>
+#### FACULTY OF COMPUTER SCIENCE - Master in Artificial Intelligence
+#### Topic: Computer Graphics \[2014\]
+#### Speakers: Heider Jeffer and Prof. Kai Hormann 
+#### Instructor: Mehdi Jazayeri
+#### Assistant: Sasa Nesic
 
 # Summary
 
